@@ -10,6 +10,7 @@ const PORT = ENV.PORT || 5001;
 
 app.use(express.json());
 
+app.get("/api/health", (req,res) => res.send("api incoming"));
 
 app.post("/api/favorites", async(req,res) => {
     try {
